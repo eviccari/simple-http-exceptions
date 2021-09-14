@@ -12,6 +12,11 @@ To supply basic classes with minimal http error status model. This is helpful in
 Throw an specific HttpException instance for an specific scenario:
 
 ```javascript
+//import then
+const NotFoundException = require("simple-http-exceptions/errors/not-found-exception");
+
+//...omitted code
+
 //Simple example with express framework
 app.get("/api/find/:id", async (req, res) => {
   try {
