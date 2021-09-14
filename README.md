@@ -2,7 +2,7 @@
 
 ## Objective
 
-To supply basic classes with minimal http error status model. This is helpful in REST APIs implementation scenario to standardize errors code.
+To supply basic classes with minimal http error status model. This is helpful in REST APIs implementation scenario to standardize return codes.
 
 <h2></h2>
 &nbsp;
