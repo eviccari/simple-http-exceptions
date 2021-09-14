@@ -1,0 +1,17 @@
+{
+  "name": "simple-http-exceptions",
+  "version": "1.0.0",
+  "description": "Class collection to supply basic exception models for response errors code",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "http",
+    "exceptions",
+    "statusCode",
+    "http-status"
+  ],
+  "author": "Eduardo Paixao Viccari",
+  "license": "MIT"
+}
