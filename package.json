@@ -1,6 +1,6 @@
 {
   "name": "simple-http-exceptions",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Class collection to supply basic exception models for response errors code",
   "main": "index.js",
   "scripts": {

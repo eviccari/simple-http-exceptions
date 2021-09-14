@@ -13,10 +13,10 @@ Throw an specific HttpException instance for an specific scenario:
 
 ```javascript
 //Simple example with express framework
-app.get("/api/find/:id", (req, res) => {
+app.get("/api/find/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const data = entityServer.findById(id);
+    const data = await entityServer.findById(id);
 
     if (data === null) {
       throw new NotFoundException("Entity not found");
