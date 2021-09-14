@@ -24,13 +24,13 @@ app.get("/api/find/:id", async (req, res) => {
     const data = await entityServer.findById(id);
 
     if (data === null) {
-      throw new NotFoundException("Entity not found");
+      throw new NotFoundException("Entity not found"); // ### Here is the trick ###
     }
 
     return res.status(200).json(data);
   } catch (error) {
     return res
-      .status(error._httpStatus) // assume 404 http status
+      .status(error._httpStatus) // ### assume 404 http status ###
       .json({ message: error.message, errorType: error._name });
   }
 });
