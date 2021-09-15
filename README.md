@@ -36,6 +36,31 @@ app.get("/api/find/:id", async (req, res) => {
 });
 ```
 
+Alternatively, you could implements a centralized error handler in a middleware:
+
+```javascript
+/**
+ * To handle all errors that have been throw
+ * @param error
+ * @param req
+ * @param res
+ * @param next
+ * @returns {response}
+ */
+module.exports = function (error, req, res, next) {
+  if (error._httpStatus === 500) {
+    logger.error(error.stack);
+  } else {
+    logger.error(error.message);
+  }
+
+  return res.status(error._httpStatus).json({
+    message: error.message,
+    errorType: error._httpStatus,
+  });
+};
+```
+
 If you need more custom error map class, could you implement SimpleHttpException by yourself:
 
 ```javascript
