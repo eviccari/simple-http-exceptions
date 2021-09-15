@@ -2,7 +2,7 @@ const SimpleHttpException = require("./simple-http-exception");
 
 class InternalServerErrorException extends SimpleHttpException {
   constructor(message) {
-    super(message, "BAD_REQUEST", 500);
+    super(message, "INTERNAL_SERVER_ERROR", 500);
   }
 }
 
